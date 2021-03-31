@@ -14,7 +14,7 @@
         <h1 class="collection-title">Fins</h1>
 
         <%- include('../partials/sidebar/fins-sidebar')%>
-        
+
         <div class="toolbar">
             <div>
                 <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
@@ -24,15 +24,17 @@
         </div>
         <div class="shop-content">
             <% for(let i = 0; i < allFins.length; i++) {%>
-            <div class="product<%= i+1 %> ">
-                <div>
-                    <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
-                    <h2 class="product-name"><%= allFins[i].name %> </h2>
-                    <!-- <h2 class="product-desc"><%= allFins[i].description %> </h2> -->
+            <a href="/surfboards/<%= allFins[i]._id %> ">
+                <div class="product<%= i+1 %> ">
+                    <div>
+                        <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
+                        <h2 class="product-name"><%= allFins[i].name %> </h2>
+                        <!-- <h2 class="product-desc"><%= allFins[i].description %> </h2> -->
 
-                    <h6 class="product-price">$<%= allFins[i].price %>.00 </h6>
+                        <h6 class="product-price">$<%= allFins[i].price %>.00 </h6>
+                    </div>
                 </div>
-            </div>
+            </a>
             <% } %>
         </div>
 

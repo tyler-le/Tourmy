@@ -12,10 +12,8 @@
 
         <div class="breadcrumb"><a href="/surfboards">Surfboards</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
         <h1 class="collection-title"><%= specificProduct.name %></h1>
-
-        <%- include('../partials/sidebar/fins-sidebar')%>
         
-        <!-- <h1><%= `Product ID: ${specificProduct.id}, Product Name: ${specificProduct.name}` %> </h1> -->
+        <h1><%= specificProduct.name %> </h1>
         <img src="/images/surfboards/firewire_seaside.jpg" alt="">
         <%- include('../partials/footer')%>
 

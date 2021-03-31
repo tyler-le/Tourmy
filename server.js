@@ -88,6 +88,16 @@ app.get('/surfboards/:id', async (req, res) => {
   res.render('tourmy/show', {specificProduct});
 });
 
+app.get('/fins/:id', async (req, res) => {
+  const specificProduct = await Product.findById(req.params.id);
+  res.render('tourmy/show', {specificProduct});
+});
+
+app.get('/accessories/:id', async (req, res) => {
+  const specificProduct = await Product.findById(req.params.id);
+  res.render('tourmy/show', {specificProduct});
+});
+
 
 //=====//
 
