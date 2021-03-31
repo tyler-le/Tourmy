@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+    <title>Tourmy Accessories</title>
+</head>
+
+<body>
+    <div class="container-fluid container-shop">
+        <%- include('../partials/navbar')%>
+        <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span>Accessories</span></div>
+        <h1 class="collection-title">Accessories</h1>
+        <%- include('../partials/sidebar/accessories-sidebar')%>
+
+        <div class="toolbar">
+            <div>
+                <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+                <span class="num-results">Showing: <%= allAccessories.length %>  results</span>
+                <%- include('../partials/dropdown-sortby')%>
+            </div>
+        </div>
+        <div class="shop-content">
+            <% for(let i = 0; i < allAccessories.length; i++) {%>
+            <div class="product<%= i+1 %> ">
+                <div>
+                    <img class="product-img" src="/images/accessories/leash.jpg" alt="">
+                    <h2 class="product-name"><%= allAccessories[i].name %> </h2>
+                    <!-- <h2 class="product-desc"><%= allAccessories[i].description %> </h2> -->
+
+                    <h6 class="product-price">$<%= allAccessories[i].price %>.00 </h6>
+                </div>
+            </div>
+            <% } %>
+        </div>
+
+        <%- include('../partials/footer')%>
+    </div>
+
+    <%- include('../partials/bootstrap_cdn')%>
+</body>
+
+</html>

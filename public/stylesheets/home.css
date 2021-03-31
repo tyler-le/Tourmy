@@ -1,0 +1,431 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+    display: grid;
+    /* height: 100vh; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .6fr .6fr .2fr 1fr .3fr;
+    grid-template-areas: "nav nav nav nav" "shop-surfboards shop-surfboards shop-surfboards shop-surfboards" "shop-fins shop-fins shop-accessories shop-accessories" "page-break page-break page-break page-break" "surfboard1 surfboard2 surfboard3 surfboard4" "footer footer footer footer";
+}
+
+nav {
+    grid-area: nav;
+    padding: 10px 0px;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.bg-light {
+    background: white;
+}
+
+.navbar-light .navbar-brand {
+    /* padding-left: 10px; */
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 30px;
+    background: black;
+    color: white;
+    height: 100%;
+    padding: 1.5vw 5vw;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 5px solid #F8F9FA;
+    /* Keep this because border bottom changes width of div */
+    font-size: 22px;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: black;
+    border-bottom: 5px solid black;
+    /* outline: 2px solid black; */
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, .55);
+    border-color: rgba(0, 0, 0, .1);
+    margin-right: 10px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.nav-item:last-child {
+    border-right: none;
+    padding-right: 3vw;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.product-home:hover {
+    opacity: .95;
+    transition: .3s ease-in-out;
+}
+
+.featured-boards-panel {
+    margin: 10px;
+}
+
+.featured-boards-panel:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .3s ease-in-out;
+}
+
+.featured-boards-panel h2, .featured-boards-panel h6 {
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#shop-surfboards {
+    grid-area: shop-surfboards;
+    /* background: #84ffff; */
+    position: relative;
+    margin-bottom: 3px;
+    cursor: pointer;
+    max-height: 500px;
+}
+
+.shop-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.shop-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-size: 6vh;
+    color: white;
+    z-index: 1;
+}
+
+#shop-fins {
+    grid-area: shop-fins;
+    /* background: #18ffff; */
+    position: relative;
+    margin-right: 3px;
+    cursor: pointer;
+    max-height: 400px;
+}
+
+#shop-accessories {
+    grid-area: shop-accessories;
+    /* background: #6fffd2; */
+    position: relative;
+    cursor: pointer;
+    max-height: 400px;
+}
+
+#page-break {
+    grid-area: page-break;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+#featured-boards {
+    grid-area: featured-boards;
+    /* background: #18ffff; */
+}
+
+#surfboard1 {
+    grid-area: surfboard1;
+    /* background:black; */
+}
+
+#surfboard2 {
+    grid-area: surfboard2;
+    /* background:black; */
+}
+
+#surfboard3 {
+    grid-area: surfboard3;
+    /* background:black; */
+}
+
+#surfboard4 {
+    grid-area: surfboard4;
+    /* background:black; */
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+footer a, footer i, footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .container-fluid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .4fr 1.3fr 1fr 1fr .4fr 1.5fr 1.5fr .2fr;
+        grid-template-areas: "nav nav" "shop-surfboards shop-surfboards" "shop-fins shop-fins" "shop-accessories shop-accessories" "page-break page-break" "surfboard1 surfboard2" "surfboard3 surfboard4" "footer footer";
+    }
+    #shop-fins {
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #page-break .col {
+        padding: 25px;
+    }
+    .navbar-light .navbar-brand {
+        /* padding-left: 10px; */
+        background: #F8F9FA;
+        color: black;
+        height: auto;
+        text-align: center;
+    }
+}
+
+/* Fins Page */
+
+.container-shop {
+    display: grid;
+    grid-template-columns: .7fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .2fr .1fr .1fr .1fr 1fr 1fr 1fr .4fr;
+    grid-template-areas: "nav nav nav nav nav" "breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb" "sidebar collection-title collection-title collection-title collection-title" "sidebar toolbar toolbar toolbar toolbar" "sidebar shop-content shop-content shop-content shop-content" "sidebar shop-content shop-content shop-content shop-content" "sidebar shop-content shop-content shop-content shop-content" "footer footer footer footer footer";
+}
+
+.breadcrumb {
+    background: #F5F5F5;
+    grid-area: breadcrumb;
+    color: black;
+    padding: 8px 9%;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+    padding-right: 12px;
+}
+
+.breadcrumb span:last-child {
+    font-weight: 700;
+    padding-left: 12px;
+    cursor: default
+}
+
+.collection-title {
+    /* background: #444; */
+    background: white;
+    grid-area: collection-title;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 26px;
+    padding: 0px 15px;
+}
+
+.sidebar {
+    /* background: green; */
+    grid-area: sidebar;
+    /* position: absolute; */
+    padding-left: 15px;
+}
+
+.sidebar h6 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.toolbar {
+    background: white;
+    grid-area: toolbar;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.toolbar .filter-btn {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: auto;
+    background: black;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: .5px;
+    font-size: 15px;
+    padding: 4px 12px;
+    float: left;
+}
+
+.toolbar .num-results {
+    text-align: center;
+}
+
+.toolbar .sort-by {
+    float: right;
+}
+
+.shop-content {
+    /*Nested Grid*/
+    padding: 0;
+    display: grid;
+    grid-area: shop-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "product1 product2 product3" "product4 product5 product6" "product7 product8 product9";
+}
+
+.fin-item {
+    grid-area: fin-item;
+    width: 100%;
+}
+
+.fins-img {
+    padding-left: 45px;
+}
+
+.product1 {
+    grid-area: product1;
+}
+
+.product2 {
+    grid-area: product2;
+}
+
+.product3 {
+    grid-area: product3;
+}
+
+.product4 {
+    grid-area: product4;
+}
+
+.product5 {
+    grid-area: product5;
+}
+
+.product6 {
+    grid-area: product6;
+}
+
+.product7 {
+    grid-area: product7;
+}
+
+.product8 {
+    grid-area: product8;
+}
+
+.product9 {
+    grid-area: product9;
+}
+
+.product-img {
+    max-width: 350px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.product-img, .product-name {
+    cursor: pointer;
+}
+
+.product-name, .product-price, .product-desc {
+    text-align: center;
+}
+
+.product-name {
+    font-weight: 700;
+    color: black;
+    font-size: 28px;
+}
+
+.product-price {
+    color: #B3B3B3;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.product-price {
+    color: #0081C6;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1366px) {
+    .container-shop {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .2fr .12fr .1fr .2fr 1fr 1fr 1fr .4fr;
+        grid-template-areas: "nav nav nav" "breadcrumb breadcrumb breadcrumb" "collection-title collection-title collection-title" "toolbar toolbar toolbar" "shop-content shop-content shop-content" "shop-content shop-content shop-content" "shop-content shop-content shop-content" "footer footer footer";
+    }
+    .sidebar {
+        display: none;
+    }
+    .breadcrumb {
+        padding: 8px 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-shop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr .1fr .1fr .12fr 5fr 5fr .4fr;
+        grid-template-areas: "nav nav" "breadcrumb breadcrumb" "collection-title collection-title" "toolbar toolbar" "shop-content shop-content" "shop-content shop-content" "footer footer";
+    }
+    .sidebar {
+        display: none;
+    }
+    .shop-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "product1 product2" "product3 product4" "product5 product6" "product7 product8" "product9 placeholder";
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .shop-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "product1" "product2" "product3" "product4" "product5" "product6" "product7" "product8" "product9";
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+    <title>Tourmy Surfboards</title>
+</head>
+
+<body>
+    <div class="container-fluid container-shop">
+        <%- include('../partials/navbar')%>
+        <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span>Surfboards</span></div>
+        <h1 class="collection-title">Surfboards</h1>
+        <%- include('../partials/sidebar/surfboards-sidebar')%>
+
+        <div class="toolbar">
+            <div>
+                <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+                <span class="num-results">Showing: <%= allSurfboards.length %> results</span>
+                <%- include('../partials/dropdown-sortby')%>
+            </div>
+        </div>
+
+        <div class="shop-content">
+            <% for(let i = 0; i < allSurfboards.length; i++) {%>
+            <a href="/surfboards/<%= allSurfboards[i]._id %> ">
+                <div class="product<%= i+1 %>">
+                    <div>
+                        <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
+                        <h2 class="product-name"><%= allSurfboards[i].name %> </h2>
+                        <!-- <h2 class="product-desc"><%= allSurfboards[i].description %> </h2> -->
+
+                        <h6 class="product-price">$<%= allSurfboards[i].price %>.00 </h6>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+        </div>
+
+        <%- include('../partials/footer')%>
+    </div>
+
+    <%- include('../partials/bootstrap_cdn')%>
+</body>
+
+</html>

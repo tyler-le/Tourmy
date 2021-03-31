@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head')%>
+    <title>Tourmy Home</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <%- include('./partials/navbar')%>
+
+        <div id="shop-surfboards">
+            <a class="product-home" href="/surfboards">
+                <h1 class="shop-text">Surfboards</h1>
+                <!-- <button class="shop-button">Shop Surfboards</button> -->
+                <img src="/images/noseride.jpg" alt="">
+            </a>
+        </div>
+
+        <div id="shop-fins">
+            <a class="product-home" href="/fins">
+                <h1 class="shop-text">Fins</h1>
+                <!-- <button class="shop-button">Shop Surfboards</button> -->
+                <img src="/images/fins.jpg" alt="">
+            </a>
+        </div>
+
+        <div id="shop-accessories">
+            <a class="product-home" href="/accessories">
+                <h1 class="shop-text">Accessories</h1>
+                <!-- <button class="shop-button">Shop Surfboards</button> -->
+                <img src="/images/shop-accessories.jpg" alt="">
+            </a>
+        </div>
+
+        <div id="page-break">
+            <div class="row">
+                <div class="col">All surfboards $100 flat rate shipping in the U.S!</div>
+                <div class="col">New boards added to stock daily</div>
+                <div class="col">Free returns within 30 days</div>
+            </div>
+        </div>
+
+        <div id="surfboard1" class="featured-boards-panel ">
+            <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
+            <h2 class="product-name">Firewire Seaside</h2>
+            <h6 class="product-price">from $820.00</h6>
+        </div>
+
+        <div id="surfboard2" class="featured-boards-panel ">
+            <img class="product-img" src="/images/surfboards/hypto_krypto.jpg" alt="">
+            <h2 class="product-name">Hayden Shapes Hypto Krypto</h2>
+            <h6 class="product-price">from $745.00</h6>
+        </div>
+
+        <div id="surfboard3" class="featured-boards-panel ">
+            <img class="product-img" src="/images/surfboards/superbrand_fling.jpg" alt="">
+
+            <h2 class="product-name">Superbrand Fling</h2>
+            <h6 class="product-price">from $999.99</h6>
+        </div>
+
+        <div id="surfboard4" class="featured-boards-panel ">
+            <img class="product-img" src="/images/surfboards/lost_hydra.jpg" alt="">
+            <h2 class="product-name">Lost Hydra</h2>
+            <h6 class="product-price">from $749.99</h6>
+        </div>
+        <%- include('./partials/footer')%>
+    </div>
+    <%- include('./partials/bootstrap_cdn')%>
+</body>
+
+</html>

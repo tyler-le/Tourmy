@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+    <title>Tourmy | <%= specificProduct.name %></title>
+</head>
+
+<body>
+    <div class="container-fluid container-shop">
+        <%- include('../partials/navbar')%>
+
+        <div class="breadcrumb"><a href="/surfboards">Surfboards</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
+        <h1 class="collection-title"><%= specificProduct.name %></h1>
+
+        <%- include('../partials/sidebar/fins-sidebar')%>
+        
+        <!-- <h1><%= `Product ID: ${specificProduct.id}, Product Name: ${specificProduct.name}` %> </h1> -->
+        <img src="/images/surfboards/firewire_seaside.jpg" alt="">
+        <%- include('../partials/footer')%>
+
+    </div>
+
+    <%- include('../partials/bootstrap_cdn')%>
+
+</body>
+
+</html>
