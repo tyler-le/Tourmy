@@ -47,8 +47,23 @@ db.once("open", () => {
 
 //=====//
 
-app.get('/', function (req, res) {
-  res.render('home');
+app.get('/', async (req, res) => {
+  // Fix so that it does not have to be hardcoded.
+  const featuredSurfboards=[];
+
+  let item = await Product.find({name: "Firewire Seaside"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Haydenshapes Hypto Krypto"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Superbrand Fling"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Lost Hydra"});
+  featuredSurfboards.push(item[0])
+
+  res.render('home', {featuredSurfboards});
 })
 
 app.get('/surfboards', async function (req, res) {
