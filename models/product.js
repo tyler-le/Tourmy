@@ -27,6 +27,8 @@ const ProductSchema = new Schema({
     
     image: [ImageSchema],
 
+    video: String,
+
     tags: {
         type: Array
     }
