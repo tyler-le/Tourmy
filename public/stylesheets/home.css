@@ -500,6 +500,21 @@ footer a, footer i, footer a:hover {
         "recommend recommend" 
         "footer footer";
     }
+
+    .container-shop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr .1fr .1fr .1fr 5fr 5fr .6fr;
+        grid-template-areas: 
+        "nav nav" 
+        "breadcrumb breadcrumb" 
+        "collection-title collection-title" 
+        "toolbar toolbar" 
+        "shop-content shop-content" 
+        "shop-content shop-content" 
+        "footer footer";
+    }
+
+
     #shop-fins {
         margin-right: 0px;
         margin-bottom: 3px;
