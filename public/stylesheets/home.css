@@ -14,7 +14,7 @@ a{
     display: grid;
     /* height: 100vh; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .1fr .6fr .6fr .2fr 1fr .3fr;
+    grid-template-rows: .1fr .6fr .6fr .2fr .6fr .3fr;
     grid-template-areas: 
     "nav nav nav nav" 
     "shop-surfboards shop-surfboards shop-surfboards shop-surfboards" 
@@ -440,6 +440,9 @@ footer a, footer i, footer a:hover {
 
 
 @media only screen and (max-width: 1366px) {
+    .container-fluid{
+        grid-template-rows: .1fr .3fr .3fr .2fr .7fr 1.3fr;
+    }
     .container-shop {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: .2fr .12fr .1fr .2fr 1fr 1fr 1fr .4fr;
@@ -462,6 +465,9 @@ footer a, footer i, footer a:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    .container-fluid{
+        grid-template-rows: .1fr .6fr .6fr .2fr .6fr .6fr;
+    }
     .container-shop {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .1fr .1fr .1fr .12fr 5fr 5fr .4fr;
