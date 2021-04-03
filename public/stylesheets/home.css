@@ -355,7 +355,7 @@ footer a, footer i, footer a:hover {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    /* display: block; */
 }
 
 .product-img, .product-name {
