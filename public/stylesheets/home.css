@@ -442,9 +442,9 @@ footer a, footer i, footer a:hover {
 .image-thumbnail{
     width: 80px;
     border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
-  padding: 5px; /* Some padding */
-  margin: 0 8px;
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    margin: 0 8px;
 }
 
 img-thumbnail:hover {
