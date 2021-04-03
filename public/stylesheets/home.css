@@ -7,6 +7,11 @@ a{
     text-decoration: none;
 }
 
+.btn{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .container-fluid {
     overflow-x: hidden;
 
@@ -285,6 +290,7 @@ footer a, footer i, footer a:hover {
     font-size: 15px;
     padding: 4px 12px;
     float: left;
+    
 }
 
 .toolbar .num-results {
@@ -503,7 +509,7 @@ footer a, footer i, footer a:hover {
 
     .container-shop {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .1fr .1fr .1fr .1fr 5fr 5fr .6fr;
+        grid-template-rows: .1fr .1fr .1fr .1fr 5fr 5fr .4fr;
         grid-template-areas: 
         "nav nav" 
         "breadcrumb breadcrumb" 
@@ -512,6 +518,10 @@ footer a, footer i, footer a:hover {
         "shop-content shop-content" 
         "shop-content shop-content" 
         "footer footer";
+    }
+
+    .num-results{
+        display: none;
     }
 
 
