@@ -86,6 +86,17 @@
                         <h6 class="product-price">from $749.99</h6>
                     </a>
                 </div>
+
+                <!--FOR LOOP VERSION (WRONG IMAGES)-->
+                <!-- <% for(let i = 0; i < 4; i++) {%>
+                    <div id="surfboard<%=i+1%>" class="featured-boards-panel"> 
+                        <a href="/surfboards/<%=featuredSurfboards[i]._id %>">
+                            <img class="product-img" src="/images/surfboards/surfboard<%=i+1%>.jpg" alt="">
+                            <h2 class="product-name"><%= featuredSurfboards[i].name %></h2>
+                            <h6 class="product-price">from $<%=featuredSurfboards[i].price%>.00</h6>
+                        </a>
+                    </div>
+                <%  }%>   -->
             </div>
         </div>
         <%- include('../partials/footer')%>
