@@ -8,6 +8,8 @@ a{
 }
 
 .container-fluid {
+    overflow-x: hidden;
+
     padding: 0;
     display: grid;
     /* height: 100vh; */
@@ -393,6 +395,56 @@ footer a, footer i, footer a:hover {
 .product-price {
     color: #0081C6;
     padding-bottom: 20px;
+}
+
+/* Show Page */
+.container-show{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .2fr .12fr .1fr .2fr 1fr .4fr;
+    grid-template-areas: 
+    "nav nav nav nav" 
+    "breadcrumb breadcrumb breadcrumb breadcrumb" 
+    "show-image show-image show-info show-info" 
+    "image-carousel image-carousel show-info show-info" 
+    "recommend recommend recommend recommend" 
+    "footer footer footer footer";
+}
+
+.show-image{
+    grid-area: show-image;
+    background: red;
+}
+
+.show-info{
+    grid-area: show-info;
+    background: orange;
+}
+
+.show-info .show-btn{
+    text-align: center;
+}
+
+.show-info .show-btn button{
+    background: black;
+    color:white;
+    border: none;
+    padding: 10px 25px;
+}
+
+.image-carousel{
+    grid-area: image-carousel;
+    background: green;
+}
+
+.recommend{
+    grid-area: recommend;
+    background: purple;
+    text-align: center;
+}
+
+.recommended-boards{
+    display: grid;
+    grid-template-areas: "surfboard1 surfboard2 surfboard3 surfboard4";
 }
 
 @media only screen and (max-width: 1366px) {

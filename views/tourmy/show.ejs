@@ -7,16 +7,71 @@
 </head>
 
 <body>
-    <div class="container-fluid container-shop">
+    <div class="container-fluid container-show">
         <%- include('../partials/navbar')%>
 
-        <div class="breadcrumb"><a href="/surfboards">Surfboards</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
-        <h1 class="collection-title"><%= specificProduct.name %></h1>
-        
-        <h1><%= specificProduct.name %> </h1>
-        <img src="/images/surfboards/firewire_seaside.jpg" alt="">
-        <%- include('../partials/footer')%>
+        <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
 
+        <div class="show-image">
+            <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
+        </div>
+
+        <div class="show-info">
+            <h1><%= specificProduct.name %></h1>
+            <h4>$<%= specificProduct.price %>.00</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, unde voluptates fugit harum
+                dignissimos id sapiente repellendus dolores hic neque, quas accusamus, cupiditate libero qui odit ut
+                atque dolore quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis natus nemo
+                culpa tempore modi temporibus perferendis quibusdam exercitationem error ratione tenetur asperiores
+                aspernatur, quia nesciunt ullam libero odit amet quisquam?</p>
+
+            <div class="show-btn">
+                <button>Add To Cart</button> <button>Customize</button>
+            </div>
+        </div>
+
+        <div class="image-carousel">
+            <h1>Image Carousel Here</h1>
+        </div>
+
+        <div class="recommend">
+            <h1 class="header">You May Also Like...</h1>
+            <div class="recommended-boards">
+                <div id="surfboard1" class="featured-boards-panel ">
+                    <a href="/surfboards/<%= featuredSurfboards[0]._id %> ">
+                        <img class="product-img" src="/images/surfboards/firewire_seaside.jpg" alt="">
+                        <h2 class="product-name">Firewire Seaside</h2>
+                        <h6 class="product-price">from $820.00</h6>
+                    </a>
+                </div>
+
+                <div id="surfboard2" class="featured-boards-panel ">
+                    <a href="/surfboards/<%= featuredSurfboards[1]._id %> ">
+                        <img class="product-img" src="/images/surfboards/hypto_krypto.jpg" alt="">
+                        <h2 class="product-name">Hayden Shapes Hypto Krypto</h2>
+                        <h6 class="product-price">from $745.00</h6>
+                    </a>
+                </div>
+
+                <div id="surfboard3" class="featured-boards-panel ">
+                    <a href="/surfboards/<%= featuredSurfboards[2]._id %> ">
+                        <img class="product-img" src="/images/surfboards/superbrand_fling.jpg" alt="">
+                        <h2 class="product-name">Superbrand Fling</h2>
+                        <h6 class="product-price">from $999.99</h6>
+                    </a>
+                </div>
+
+                <div id="surfboard4" class="featured-boards-panel ">
+                    <a href="/surfboards/<%= featuredSurfboards[3]._id %> ">
+                        <img class="product-img" src="/images/surfboards/lost_hydra.jpg" alt="">
+                        <h2 class="product-name">Lost Hydra</h2>
+                        <h6 class="product-price">from $749.99</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../partials/footer')%>
     </div>
 
     <%- include('../partials/bootstrap_cdn')%>

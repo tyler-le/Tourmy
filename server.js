@@ -47,6 +47,8 @@ db.once("open", () => {
 
 //=====//
 
+
+
 app.get('/', async (req, res) => {
   // Fix so that it does not have to be hardcoded.
   const featuredSurfboards=[];
@@ -83,9 +85,24 @@ app.get('/accessories', async function (req, res) {
 
 //=====//
 
-app.get('/surfboards/:id', async (req, res) => {
+app.get('/surfboards/:id', async (req, res, featuredSurfboards) => {
+  // Fix so that it does not have to be hardcoded.
+  featuredSurfboards=[];
+
+  let item = await Product.find({name: "Firewire Seaside"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Haydenshapes Hypto Krypto"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Superbrand Fling"});
+  featuredSurfboards.push(item[0])
+
+  item = await Product.find({name: "Lost Hydra"});
+  featuredSurfboards.push(item[0])
+
   const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {specificProduct});
+  res.render('tourmy/show', {specificProduct, featuredSurfboards});
 });
 
 app.get('/fins/:id', async (req, res) => {
