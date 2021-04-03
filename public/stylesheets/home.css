@@ -416,7 +416,9 @@ footer a, footer i, footer a:hover {
 
 .show-info{
     grid-area: show-info;
-    background: orange;
+    border-left: 1px solid lightgray;
+    padding:50px;
+    /* background: orange; */
 }
 
 .show-info .show-btn{
@@ -432,12 +434,13 @@ footer a, footer i, footer a:hover {
 
 .image-carousel{
     grid-area: image-carousel;
-    background: green;
+    /* background: green; */
 }
 
 .recommend{
     grid-area: recommend;
     text-align: center;
+    border-top: 1px solid lightgray;
 }
 
 .recommend .header{
@@ -474,6 +477,11 @@ footer a, footer i, footer a:hover {
     .breadcrumb {
         padding: 8px 15px;
     }
+
+    .show-info{
+        padding:10px;
+        font-size: 1.5vw;
+    }
 }
 
 /* Mini Tablets */
@@ -508,6 +516,10 @@ footer a, footer i, footer a:hover {
     }
     .container-show{
         grid-template-rows: .2fr .1fr .5fr .2fr 1fr .8fr;
+    }
+    .show-info{
+        padding:10px;
+        font-size: 2vw;
     }
 }
 
@@ -581,6 +593,10 @@ footer a, footer i, footer a:hover {
             "recommend" 
             "footer";
     }
+    .show-info{
+        padding:10px;
+        font-size: 3.2vw;
+    }
 }
 
 @media only screen and (max-width: 470px) {
@@ -597,5 +613,9 @@ footer a, footer i, footer a:hover {
             "product7" 
             "product8" 
             "product9";
+    }
+    .show-info{
+        padding:10px;
+        font-size: 4vw;
     }
 }
