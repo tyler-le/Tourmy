@@ -15,7 +15,13 @@ a{
     /* height: 100vh; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: .1fr .6fr .6fr .2fr 1fr .3fr;
-    grid-template-areas: "nav nav nav nav" "shop-surfboards shop-surfboards shop-surfboards shop-surfboards" "shop-fins shop-fins shop-accessories shop-accessories" "page-break page-break page-break page-break" "surfboard1 surfboard2 surfboard3 surfboard4" "footer footer footer footer";
+    grid-template-areas: 
+    "nav nav nav nav" 
+    "shop-surfboards shop-surfboards shop-surfboards shop-surfboards" 
+    "shop-fins shop-fins shop-accessories shop-accessories" 
+    "page-break page-break page-break page-break" 
+    "recommend recommend recommend recommend" 
+    "footer footer footer footer";
 }
 
 nav {
@@ -207,27 +213,7 @@ footer a, footer i, footer a:hover {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 550px) {
-    .container-fluid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .4fr 1.3fr 1fr 1fr .4fr 1.5fr 1.5fr .2fr;
-        grid-template-areas: "nav nav" "shop-surfboards shop-surfboards" "shop-fins shop-fins" "shop-accessories shop-accessories" "page-break page-break" "surfboard1 surfboard2" "surfboard3 surfboard4" "footer footer";
-    }
-    #shop-fins {
-        margin-right: 0px;
-        margin-bottom: 3px;
-    }
-    #page-break .col {
-        padding: 25px;
-    }
-    .navbar-light .navbar-brand {
-        /* padding-left: 10px; */
-        background: #F8F9FA;
-        color: black;
-        height: auto;
-        text-align: center;
-    }
-}
+
 
 /* Fins Page */
 
@@ -457,7 +443,15 @@ footer a, footer i, footer a:hover {
     .container-shop {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: .2fr .12fr .1fr .2fr 1fr 1fr 1fr .4fr;
-        grid-template-areas: "nav nav nav" "breadcrumb breadcrumb breadcrumb" "collection-title collection-title collection-title" "toolbar toolbar toolbar" "shop-content shop-content shop-content" "shop-content shop-content shop-content" "shop-content shop-content shop-content" "footer footer footer";
+        grid-template-areas: 
+        "nav nav nav" 
+        "breadcrumb breadcrumb breadcrumb" 
+        "collection-title collection-title collection-title" 
+        "toolbar toolbar toolbar" 
+        "shop-content shop-content shop-content" 
+        "shop-content shop-content shop-content" 
+        "shop-content shop-content shop-content" 
+        "footer footer footer";
     }
     .sidebar {
         display: none;
@@ -480,6 +474,45 @@ footer a, footer i, footer a:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "product1 product2" "product3 product4" "product5 product6" "product7 product8" "product9 placeholder";
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container-fluid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr .5fr .5fr .5fr .2fr 4fr .4fr;
+        grid-template-areas: 
+        "nav nav" 
+        "shop-surfboards shop-surfboards" 
+        "shop-fins shop-fins" 
+        "shop-accessories shop-accessories" 
+        "page-break page-break" 
+        "recommend recommend" 
+        "footer footer";
+    }
+    #shop-fins {
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+    #page-break .col {
+        padding: 25px;
+    }
+    .navbar-light .navbar-brand {
+        /* padding-left: 10px; */
+        background: #F8F9FA;
+        color: black;
+        height: auto;
+        text-align: center;
+    }
+
+    .recommended-boards{
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr .3fr .3fr .3fr;
+        grid-template-areas: 
+        "surfboard1"
+        "surfboard2"
+        "surfboard3"
+        "surfboard4";
     }
 }
 
