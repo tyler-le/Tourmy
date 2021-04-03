@@ -412,7 +412,11 @@ footer a, footer i, footer a:hover {
 
 .show-image{
     grid-area: show-image;
-    background: red;
+}
+
+.show-image img{
+    max-height: 500px;
+    object-fit: contain;
 }
 
 .show-info{
@@ -438,14 +442,16 @@ footer a, footer i, footer a:hover {
 
 .recommend{
     grid-area: recommend;
-    background: purple;
     text-align: center;
 }
+
 
 .recommended-boards{
     display: grid;
     grid-template-areas: "surfboard1 surfboard2 surfboard3 surfboard4";
 }
+
+
 
 @media only screen and (max-width: 1366px) {
     .container-shop {
