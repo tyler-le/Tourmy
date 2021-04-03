@@ -431,13 +431,14 @@ footer a, footer i, footer a:hover {
     text-align: center;
 }
 
+.recommend .header{
+    padding-top: 20px;
+}
 
 .recommended-boards{
     display: grid;
     grid-template-areas: "surfboard1 surfboard2 surfboard3 surfboard4";
 }
-
-
 
 @media only screen and (max-width: 1366px) {
     .container-fluid{
