@@ -386,7 +386,7 @@ footer a, footer i, footer a:hover {
 /* Show Page */
 .container-show{
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .2fr .12fr .1fr .2fr 1fr .4fr;
+    grid-template-rows: .2fr .12fr .1fr .2fr 1fr .3fr;
     grid-template-areas: 
     "nav nav nav nav" 
     "breadcrumb breadcrumb breadcrumb breadcrumb" 
@@ -481,6 +481,9 @@ footer a, footer i, footer a:hover {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "product1 product2" "product3 product4" "product5 product6" "product7 product8" "product9 placeholder";
     }
+    .container-show{
+        grid-template-rows: .2fr .1fr .5fr .2fr 1fr .8fr;
+    }
 }
 
 @media only screen and (max-width: 550px) {
@@ -519,6 +522,19 @@ footer a, footer i, footer a:hover {
         "surfboard2"
         "surfboard3"
         "surfboard4";
+    }
+
+    .container-show{
+        grid-template-columns: 1fr;
+        grid-template-rows: .05fr .01fr .25fr .05fr .22fr .1fr .1fr;
+        grid-template-areas: 
+        "nav" 
+        "breadcrumb" 
+        "show-image" 
+        "image-carousel"
+        "show-info" 
+        "recommend" 
+        "footer";
     }
 }
 
