@@ -13,7 +13,6 @@
         <div id="shop-surfboards">
             <a class="product-home" href="/surfboards">
                 <h1 class="shop-text">Surfboards</h1>
-                <!-- <button class="shop-button">Shop Surfboards</button> -->
                 <img src="/images/noseride.jpg" alt="">
             </a>
         </div>
@@ -21,7 +20,6 @@
         <div id="shop-fins">
             <a class="product-home" href="/fins">
                 <h1 class="shop-text">Fins</h1>
-                <!-- <button class="shop-button">Shop Surfboards</button> -->
                 <img src="/images/fins.jpg" alt="">
             </a>
         </div>
@@ -29,7 +27,6 @@
         <div id="shop-accessories">
             <a class="product-home" href="/accessories">
                 <h1 class="shop-text">Accessories</h1>
-                <!-- <button class="shop-button">Shop Surfboards</button> -->
                 <img src="/images/shop-accessories.jpg" alt="">
             </a>
         </div>
@@ -45,7 +42,7 @@
         <div class="recommend">
             <h1 class="header">Featured Boards</h1>
             <div class="recommended-boards">
-                <% for(let i = 0; i < 4; i++) {%>
+                <% for(let i = 0; i < featuredSurfboards.length; i++) {%>
                 <div id="surfboard<%=i+1%>" class="featured-boards-panel">
                     <a href="/surfboards/<%=featuredSurfboards[i]._id %>">
                         <img class="product-img" src="<%=featuredSurfboards[i].image%> " alt="">
