@@ -11,7 +11,7 @@
         <%- include('../partials/navbar')%>
         <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
         <div class="show-image">
-            <img src="/images/surfboards/orig/firewire_seaside.jpg" alt="">
+            <img src="<%=specificProduct.image%>" alt="">
         </div>
 
         <div class="show-info">
@@ -29,16 +29,16 @@
         </div>
 
         <div class="image-carousel">
-            <a target="_blank" href="/images/surfboards/orig/firewire_seaside.jpg">
-                <img src="/images/surfboards/orig/firewire_seaside.jpg" alt="" class="image-thumbnail">
+            <a target="_blank" href="<%=specificProduct.image%>">
+                <img src="<%=specificProduct.image%>" alt="" class="image-thumbnail">
             </a>
 
-            <a target="_blank" href="/images/surfboards/orig/firewire_seaside.jpg">
-                <img src="/images/surfboards/orig/firewire_seaside.jpg" alt="" class="image-thumbnail">
+            <a target="_blank" href="<%=specificProduct.image%>">
+                <img src="<%=specificProduct.image%>" alt="" class="image-thumbnail">
             </a>
 
-            <a target="_blank" href="/images/surfboards/orig/firewire_seaside.jpg">
-                <img src="/images/surfboards/orig/firewire_seaside.jpg" alt="" class="image-thumbnail">
+            <a target="_blank" href="<%=specificProduct.image%>">
+                <img src="<%=specificProduct.image%>" alt="" class="image-thumbnail">
             </a>
 
         </div>
@@ -55,7 +55,7 @@
         <div class="recommend">
             <h1 class="header">You May Also Like</h1>
             <div class="recommended-boards">
-                <div id="surfboard1" class="featured-boards-panel ">
+                <!-- <div id="surfboard1" class="featured-boards-panel ">
                     <a href="/surfboards/<%= featuredSurfboards[0]._id %> ">
                         <img class="product-img" src="/images/surfboards/orig/firewire_seaside.jpg" alt="">
                         <h2 class="product-name">Firewire Seaside</h2>
@@ -85,18 +85,18 @@
                         <h2 class="product-name">Lost Hydra</h2>
                         <h6 class="product-price">from $749.99</h6>
                     </a>
-                </div>
+                </div> -->
 
                 <!--FOR LOOP VERSION (WRONG IMAGES)-->
-                <!-- <% for(let i = 0; i < 4; i++) {%>
+                <% for(let i = 0; i < 4; i++) {%>
                     <div id="surfboard<%=i+1%>" class="featured-boards-panel"> 
                         <a href="/surfboards/<%=featuredSurfboards[i]._id %>">
-                            <img class="product-img" src="/images/surfboards/surfboard<%=i+1%>.jpg" alt="">
+                            <img class="product-img" src="<%=featuredSurfboards[i].image%> " alt="">
                             <h2 class="product-name"><%= featuredSurfboards[i].name %></h2>
                             <h6 class="product-price">from $<%=featuredSurfboards[i].price%>.00</h6>
                         </a>
                     </div>
-                <%  }%>   -->
+                <%  }%>  
             </div>
         </div>
         <%- include('../partials/footer')%>
