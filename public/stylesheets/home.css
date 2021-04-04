@@ -527,8 +527,7 @@ img-thumbnail:hover {
             "footer";
     }
     .container-show{
-        grid-template-rows: .2fr .12fr .1fr .1fr .8fr 1fr 1.3fr;
-
+        grid-template-rows: .2fr .12fr .1fr .1fr 1fr 1fr .28fr;
     }
     .sidebar {
         display: none;
@@ -594,7 +593,7 @@ img-thumbnail:hover {
     .container-show{
         /* grid-template-rows: .2fr .1fr .5fr .2fr 1fr .8fr; */
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: .2fr .12fr .1fr .2fr 1fr 1fr .65fr;
+        grid-template-rows: .1fr .08fr .4fr .2fr .7fr 1.5fr .25fr;
         grid-template-areas: 
         "nav nav nav nav" 
         "breadcrumb breadcrumb breadcrumb breadcrumb" 
@@ -665,7 +664,7 @@ img-thumbnail:hover {
 
     .recommended-boards{
         grid-template-columns: 1fr;
-        grid-template-rows: .3fr .3fr .3fr .3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "surfboard1"
             "surfboard2"
@@ -675,7 +674,7 @@ img-thumbnail:hover {
 
     .container-show{
         grid-template-columns: 1fr;
-        grid-template-rows: .05fr .01fr .25fr .05fr .22fr .15fr .1fr .1fr;
+        grid-template-rows: .05fr .01fr .25fr .05fr .22fr .4fr 3fr .25fr;
         grid-template-areas: 
             "nav" 
             "breadcrumb" 
@@ -685,6 +684,10 @@ img-thumbnail:hover {
             "video"
             "recommend" 
             "footer";
+    }
+
+    .product-img{
+        object-fit: contain;
     }
 
     .video iframe{
