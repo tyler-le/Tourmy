@@ -42,61 +42,23 @@
             </a>
 
         </div>
-        <!-- <div class="video">
-            <iframe src="https://www.youtube.com/embed/vXyU298f0vk" frameborder="0"></iframe>
-        </div> -->
 
         <div class="video embed-responsive embed-responsive-16by9">
-            <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vXyU298f0vk" allowfullscreen></iframe> -->
             <iframe class="embed-responsive-item" src="<%= specificProduct.video %>" allowfullscreen></iframe>
-
         </div>
 
         <div class="recommend">
             <h1 class="header">You May Also Like</h1>
             <div class="recommended-boards">
-                <!-- <div id="surfboard1" class="featured-boards-panel ">
-                    <a href="/surfboards/<%= featuredSurfboards[0]._id %> ">
-                        <img class="product-img" src="/images/surfboards/orig/firewire_seaside.jpg" alt="">
-                        <h2 class="product-name">Firewire Seaside</h2>
-                        <h6 class="product-price">from $820.00</h6>
-                    </a>
-                </div>
-
-                <div id="surfboard2" class="featured-boards-panel ">
-                    <a href="/surfboards/<%= featuredSurfboards[1]._id %> ">
-                        <img class="product-img" src="/images/surfboards/orig/hypto_krypto.jpg" alt="">
-                        <h2 class="product-name">Hayden Shapes Hypto Krypto</h2>
-                        <h6 class="product-price">from $745.00</h6>
-                    </a>
-                </div>
-
-                <div id="surfboard3" class="featured-boards-panel ">
-                    <a href="/surfboards/<%= featuredSurfboards[2]._id %> ">
-                        <img class="product-img" src="/images/surfboards/orig/superbrand_fling.jpg" alt="">
-                        <h2 class="product-name">Superbrand Fling</h2>
-                        <h6 class="product-price">from $999.99</h6>
-                    </a>
-                </div>
-
-                <div id="surfboard4" class="featured-boards-panel ">
-                    <a href="/surfboards/<%= featuredSurfboards[3]._id %> ">
-                        <img class="product-img" src="/images/surfboards/orig/lost_hydra.jpg" alt="">
-                        <h2 class="product-name">Lost Hydra</h2>
-                        <h6 class="product-price">from $749.99</h6>
-                    </a>
-                </div> -->
-
-                <!--FOR LOOP VERSION (WRONG IMAGES)-->
                 <% for(let i = 0; i < 4; i++) {%>
-                    <div id="surfboard<%=i+1%>" class="featured-boards-panel"> 
-                        <a href="/surfboards/<%=featuredSurfboards[i]._id %>">
-                            <img class="product-img" src="<%=featuredSurfboards[i].image%> " alt="">
-                            <h2 class="product-name"><%= featuredSurfboards[i].name %></h2>
-                            <h6 class="product-price">from $<%=featuredSurfboards[i].price%>.00</h6>
-                        </a>
-                    </div>
-                <%  }%>  
+                <div id="surfboard<%=i+1%>" class="featured-boards-panel">
+                    <a href="/surfboards/<%=featuredSurfboards[i]._id %>">
+                        <img class="product-img" src="<%=featuredSurfboards[i].image%> " alt="">
+                        <h2 class="product-name"><%= featuredSurfboards[i].name %></h2>
+                        <h6 class="product-price">from $<%=featuredSurfboards[i].price%>.00</h6>
+                    </a>
+                </div>
+                <%  }%>
             </div>
         </div>
         <%- include('../partials/footer')%>

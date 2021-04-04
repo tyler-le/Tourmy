@@ -225,15 +225,13 @@ footer a, footer i, footer a:hover {
 .container-shop {
     display: grid;
     grid-template-columns: .7fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: .2fr .1fr .1fr .1fr 1fr 1fr 1fr .4fr;
+    grid-template-rows: .2fr .1fr .1fr .1fr 2.5fr .3fr;
 
     grid-template-areas: 
     "nav nav nav nav nav" 
     "breadcrumb breadcrumb breadcrumb breadcrumb breadcrumb" 
     "sidebar collection-title collection-title collection-title collection-title" 
     "sidebar toolbar toolbar toolbar toolbar" 
-    "sidebar shop-content shop-content shop-content shop-content" 
-    "sidebar shop-content shop-content shop-content shop-content" 
     "sidebar shop-content shop-content shop-content shop-content" 
     "footer footer footer footer footer";
 }
@@ -321,7 +319,8 @@ footer a, footer i, footer a:hover {
     "product1 product2 product3" 
     "product4 product5 product6" 
     "product7 product8 product9";
-    height: auto;
+    /* height: auto; */
+    /* height: 20% */
 }
 
 .fin-item {
@@ -508,17 +507,15 @@ img-thumbnail:hover {
         grid-template-rows: .1fr .3fr .3fr .2fr .7fr .3fr;
     }
     .container-shop {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: .2fr .12fr .1fr .2fr 1fr 1fr 1fr .4fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .1fr .1fr .2fr 3fr .4fr;
         grid-template-areas: 
-            "nav nav nav" 
-            "breadcrumb breadcrumb breadcrumb" 
-            "collection-title collection-title collection-title" 
-            "toolbar toolbar toolbar" 
-            "shop-content shop-content shop-content" 
-            "shop-content shop-content shop-content" 
-            "shop-content shop-content shop-content" 
-            "footer footer footer";
+            "nav" 
+            "breadcrumb" 
+            "collection-title" 
+            "toolbar" 
+            "shop-content" 
+            "footer";
     }
     .container-show{
         grid-template-rows: .2fr .12fr .1fr .1fr .8fr 1fr 1.3fr;
@@ -552,13 +549,12 @@ img-thumbnail:hover {
     }
     .container-shop {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .1fr .1fr .1fr .12fr 5fr 5fr .4fr;
+        grid-template-rows: .15fr .1fr .1fr .1fr 3fr .2fr;
         grid-template-areas: 
             "nav nav" 
             "breadcrumb breadcrumb" 
             "collection-title collection-title" 
             "toolbar toolbar" 
-            "shop-content shop-content" 
             "shop-content shop-content" 
             "footer footer";
     }
@@ -617,13 +613,12 @@ img-thumbnail:hover {
 
     .container-shop {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: .1fr .1fr .1fr .1fr 5fr 5fr .4fr;
+        grid-template-rows: .1fr .1fr .1fr .1fr 5fr .4fr;
         grid-template-areas: 
             "nav nav" 
             "breadcrumb breadcrumb" 
             "collection-title collection-title" 
             "toolbar toolbar" 
-            "shop-content shop-content" 
             "shop-content shop-content" 
             "footer footer";
     }
