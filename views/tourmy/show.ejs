@@ -9,7 +9,8 @@
 <body>
     <main class="container-fluid container-show">
         <%- include('../partials/navbar')%>
-        <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span><%= specificProduct.name %> </span></div>
+        <div class="breadcrumb"><a href=/<%=category%>><%=category.charAt(0).toUpperCase()+category.slice(1)%> </a>
+                <span>|</span> <span><%= specificProduct.name %> </span></div>
         <div class="show-image">
             <img src="<%=specificProduct.image%>" alt="">
         </div>
