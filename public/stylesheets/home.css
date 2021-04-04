@@ -428,7 +428,13 @@ footer a, footer i, footer a:hover {
     grid-area: show-info;
     border-left: 1px solid lightgray;
     padding:50px;
-    /* background: orange; */
+    font-family: 'Monsterrat', sans-serif;
+}
+
+.show-info h1{
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1.5px;
 }
 
 .show-info .show-btn{

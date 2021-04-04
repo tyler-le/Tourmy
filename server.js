@@ -24,31 +24,6 @@ db.once("open", () => {
 });
 
 
-
-
-// sandbox routes
-// app.get('/addproduct', async (req, res) => {
-//   const product = new Product({
-//     name: "Lost Hydra",
-//     description: "Lost Hydra description",
-//     price: 500.00,
-//     category: "surfboards"
-//   });
-
-//   await product.save();
-//   res.send(product);
-// })
-
-// app.get('/allproducts', async (req, res) => {
-//   const allProducts = await Product.find()
-//   res.send(allProducts)
-// })
-//
-
-//=====//
-
-
-
 app.get('/', async (req, res) => {
   // Fix so that it does not have to be hardcoded.
   const featuredSurfboards=[];
@@ -68,19 +43,12 @@ app.get('/', async (req, res) => {
   res.render('home', {featuredSurfboards});
 })
 
-app.get('/surfboards', async function (req, res) {
-  const allSurfboards = await Product.find({category:"surfboards"})
-  res.render('tourmy/surfboards', {allSurfboards});
-});
-
-app.get('/fins', async function (req, res) {
-  const allFins = await Product.find({category:"fins"})
-  res.render('tourmy/fins', {allFins});
-});
-
-app.get('/accessories', async function (req, res) {
-  const allAccessories = await Product.find({category:"accessories"})
-  res.render('tourmy/accessories', {allAccessories});
+app.get('/:category', async function (req, res) {
+  const category = req.params.category
+  const allSurfboards = await Product.find({category})
+  const allFins = await Product.find({category})
+  const allAccessories = await Product.find({category})
+  res.render(`tourmy/${category}`, {allSurfboards, allFins, allAccessories});
 });
 
 //=====//

@@ -22,10 +22,10 @@
         </div>
         <div class="shop-content">
             <% for(let i = 0; i < allAccessories.length; i++) {%>
-            <a href="/surfboards/<%= allAccessories[i]._id %> ">
+            <a href="/accessories/<%= allAccessories[i]._id %> ">
                 <div class="product<%= i+1 %> ">
                     <div>
-                        <img class="product-img" src="/images/accessories/leash.jpg" alt="">
+                        <img class="product-img" src="/images/accessories/accessory<%=i+1%>.jpg" alt="">
                         <h2 class="product-name"><%= allAccessories[i].name %> </h2>
                         <!-- <h2 class="product-desc"><%= allAccessories[i].description %> </h2> -->
 
