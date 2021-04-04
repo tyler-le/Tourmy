@@ -51,11 +51,11 @@ app.get('/:category', async function (req, res) {
   res.render(`tourmy/${category}`, {allSurfboards, allFins, allAccessories});
 });
 
-//=====//
 
 app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   // Fix so that it does not have to be hardcoded.
   featuredSurfboards=[];
+  const category = req.params.category
 
   let item = await Product.find({name: "Firewire Seaside"});
   featuredSurfboards.push(item[0])
@@ -70,10 +70,9 @@ app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   featuredSurfboards.push(item[0])
 
   const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {specificProduct, featuredSurfboards});
+  res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
 });
 
-//=====//
 
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}`)
