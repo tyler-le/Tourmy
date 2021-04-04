@@ -85,7 +85,7 @@ app.get('/accessories', async function (req, res) {
 
 //=====//
 
-app.get('/surfboards/:id', async (req, res, featuredSurfboards) => {
+app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   // Fix so that it does not have to be hardcoded.
   featuredSurfboards=[];
 
@@ -104,17 +104,6 @@ app.get('/surfboards/:id', async (req, res, featuredSurfboards) => {
   const specificProduct = await Product.findById(req.params.id);
   res.render('tourmy/show', {specificProduct, featuredSurfboards});
 });
-
-app.get('/fins/:id', async (req, res) => {
-  const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {specificProduct});
-});
-
-app.get('/accessories/:id', async (req, res) => {
-  const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {specificProduct});
-});
-
 
 //=====//
 
