@@ -18,15 +18,15 @@ a{
     padding: 0;
     display: grid;
     /* height: 100vh; */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: .1fr .6fr .6fr .2fr .6fr .3fr;
     grid-template-areas: 
-    "nav nav nav nav" 
-    "shop-surfboards shop-surfboards shop-surfboards shop-surfboards" 
-    "shop-fins shop-fins shop-accessories shop-accessories" 
-    "page-break page-break page-break page-break" 
-    "recommend recommend recommend recommend" 
-    "footer footer footer footer";
+    "nav nav" 
+    "shop-surfboards shop-surfboards" 
+    "shop-fins shop-accessories" 
+    "page-break page-break" 
+    "recommend recommend" 
+    "footer footer";
 }
 
 nav {
@@ -599,28 +599,28 @@ img-thumbnail:hover {
 /* Phones */
 @media only screen and (max-width: 590px) {
     .container-fluid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: .1fr .5fr .5fr .5fr .2fr 4fr .4fr;
         grid-template-areas: 
-            "nav nav" 
-            "shop-surfboards shop-surfboards" 
-            "shop-fins shop-fins" 
-            "shop-accessories shop-accessories" 
-            "page-break page-break" 
-            "recommend recommend" 
-            "footer footer";
+            "nav" 
+            "shop-surfboards" 
+            "shop-fins" 
+            "shop-accessories" 
+            "page-break" 
+            "recommend" 
+            "footer";
     }
 
     .container-shop {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: .1fr .1fr .1fr .1fr 5fr .4fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr .1fr .1fr .1fr 5fr .2fr;
         grid-template-areas: 
-            "nav nav" 
-            "breadcrumb breadcrumb" 
-            "collection-title collection-title" 
-            "toolbar toolbar" 
-            "shop-content shop-content" 
-            "footer footer";
+            "nav" 
+            "breadcrumb" 
+            "collection-title" 
+            "toolbar" 
+            "shop-content" 
+            "footer";
     }
 
     .num-results{
