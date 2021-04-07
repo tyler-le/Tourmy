@@ -43,7 +43,7 @@ app.get('/', async (req, res) => {
   res.render('home', {featuredSurfboards});
 })
 
-app.get('/:category', async function (req, res) {
+app.get('/:category', async (req, res) => {
   const category = req.params.category
   const allSurfboards = await Product.find({category})
   const allFins = await Product.find({category})
@@ -71,6 +71,10 @@ app.get('/:category/:id', async (req, res, featuredSurfboards) => {
 
   const specificProduct = await Product.findById(req.params.id);
   res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
+});
+
+app.all('/:action', function(req, res){
+  // somehow fixes ico error but need to properly fix later
 });
 
 
