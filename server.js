@@ -26,24 +26,13 @@ db.once("open", () => {
 
 app.get('/', async (req, res) => {
   // Fix so that it does not have to be hardcoded.
-  const featuredSurfboards=[];
-
-  let item = await Product.find({name: "Firewire Seaside"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Haydenshapes Hypto Krypto"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Superbrand Fling"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Lost Hydra"});
-  featuredSurfboards.push(item[0])
+  const featuredSurfboards=await Product.find({tags: 'featured'});
 
   res.render('home', {featuredSurfboards});
 })
 
 app.get('/:category', async function (req, res) {
+  // Refactor better
   const category = req.params.category
   const allSurfboards = await Product.find({category})
   const allFins = await Product.find({category})
@@ -53,21 +42,8 @@ app.get('/:category', async function (req, res) {
 
 
 app.get('/:category/:id', async (req, res, featuredSurfboards) => {
-  // Fix so that it does not have to be hardcoded.
-  featuredSurfboards=[];
   const category = req.params.category
-
-  let item = await Product.find({name: "Firewire Seaside"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Haydenshapes Hypto Krypto"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Superbrand Fling"});
-  featuredSurfboards.push(item[0])
-
-  item = await Product.find({name: "Lost Hydra"});
-  featuredSurfboards.push(item[0])
+  featuredSurfboards=await Product.find({tags: 'featured'});
 
   const specificProduct = await Product.findById(req.params.id);
   res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
