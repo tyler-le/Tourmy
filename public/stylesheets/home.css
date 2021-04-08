@@ -14,7 +14,6 @@ a{
 
 .container-fluid {
     overflow-x: hidden;
-
     padding: 0;
     display: grid;
     /* height: 100vh; */
@@ -32,6 +31,7 @@ a{
 nav {
     grid-area: nav;
     padding: 10px 0px;
+    
 }
 
 .navbar {
@@ -43,15 +43,13 @@ nav {
 }
 
 .navbar-light .navbar-brand {
-    /* padding-left: 10px; */
     font-family: 'Anton', sans-serif;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 30px;
     background: black;
     color: white;
-    height: 100%;
-    padding: 1.5vw 5vw;
+    padding: 1.5vw 5vw;    
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -85,7 +83,7 @@ nav {
 
 .navbar-collapse {
     text-align: center;
-    padding-right: 3vw
+    /* padding-right: 3vw */
 }
 
 .nav-item:last-child {
@@ -97,6 +95,11 @@ img {
     height: 100%;
     width: 100%;
 }
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
 
 .product-home:hover {
     opacity: .95;
