@@ -16,37 +16,62 @@ app.set('views', path.join(__dirname, 'views'));
 const mongoose = require('mongoose');
 // Connect to MongoDB
 const DB_URI = "mongodb+srv://tyler25419:Master25419!@cluster0.yd5bk.mongodb.net/Tourmy?retryWrites=true&w=majority";
-mongoose.connect(DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(DB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Connection Error:"));
 db.once("open", () => {
   console.log("Database Connected");
 });
 
+app.get('/favicon.ico', (req, res) => res.status(204));
+
+
 
 app.get('/', async (req, res) => {
-  // Fix so that it does not have to be hardcoded.
-  const featuredSurfboards=await Product.find({tags: 'featured'});
+  const featuredSurfboards = await Product.find({
+    tags: 'featured'
+  });
 
-  res.render('home', {featuredSurfboards});
+  res.render('home', {
+    featuredSurfboards
+  });
 })
 
-app.get('/:category', async function (req, res) {
+app.get('/:category', async (req, res) => {
   // Refactor better
   const category = req.params.category
-  const allSurfboards = await Product.find({category})
-  const allFins = await Product.find({category})
-  const allAccessories = await Product.find({category})
-  res.render(`tourmy/${category}`, {allSurfboards, allFins, allAccessories});
+  const allSurfboards = await Product.find({
+    category
+  })
+  const allFins = await Product.find({
+    category
+  })
+  const allAccessories = await Product.find({
+    category
+  })
+  res.render(`tourmy/${category}`, {
+    allSurfboards,
+    allFins,
+    allAccessories
+  });
 });
 
 
 app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   const category = req.params.category
-  featuredSurfboards=await Product.find({tags: 'featured'});
+  featuredSurfboards = await Product.find({
+    tags: 'featured'
+  });
 
   const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
+  res.render('tourmy/show', {
+    specificProduct,
+    featuredSurfboards,
+    category
+  });
 });
 
 
