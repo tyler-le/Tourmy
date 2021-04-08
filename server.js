@@ -74,6 +74,10 @@ app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   });
 });
 
+app.get('/cart', async (req, res) => {
+  res.render('tourmy/cart');
+});
+
 
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}`)

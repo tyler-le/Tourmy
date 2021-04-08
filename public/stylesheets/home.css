@@ -516,6 +516,26 @@ img-thumbnail:hover {
         "surfboard1 surfboard2 surfboard3 surfboard4";
 }
 
+.cart-item img,h4,span, i{
+    display: inline;
+}
+
+.cart-item i:hover{
+    cursor: pointer;
+    color:red;
+    transition: .2s ease-in-out;
+}
+
+.cart-item img{
+    height: 50px;
+    width: 50px;
+}
+
+.cart-total{
+    display: block;
+    border-top: 1px solid #B3B3B3;
+    padding: 25px;
+}
 /*Large Tablets */
 @media only screen and (max-width: 1366px) {
     .container-fluid{
