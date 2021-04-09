@@ -1,4 +1,3 @@
-
 document.getElementById("low-to-high")
   .addEventListener("click", async () => {
     console.log("HELLO")
@@ -6,8 +5,14 @@ document.getElementById("low-to-high")
     // How to access MongoDB?
   });
 
-  window.addEventListener("scroll", () => {
-    const navbar = document.querySelector("nav");
-    navbar.classList.toggle("sticky", window.scrollY > 0)
-    console.log("SCrOLL")
-  })
+document.getElementsByClassName("cart-remove")
+  .addEventListener("click", async () => {
+    console.log("CART REMOVE")
+    // Manipulate DOM here
+    // How to access MongoDB?
+  });
+
+  document.querySelector("cart-remove")
+  .addEventListener("click", async () => {
+    console.log("CART REMOVE")
+  });

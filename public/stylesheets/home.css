@@ -565,6 +565,14 @@ img-thumbnail:hover {
     flex-direction: column;
 }
 
+.item .cart-name a{
+    color: black;
+}
+
+.item .cart-name a:hover{
+    text-decoration: underline;
+}
+
 .item .cart-qty{
     grid-area: cart-qty;
     display: flex;
@@ -588,6 +596,7 @@ img-thumbnail:hover {
 
 .cart-qty i{
     font-size: 12px;
+    cursor: pointer;
 }
 
 .cart-items .cart-remove:hover{
