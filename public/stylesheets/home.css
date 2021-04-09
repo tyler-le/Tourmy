@@ -522,7 +522,7 @@ img-thumbnail:hover {
     display: grid;
     /* height: 100vh; */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr .2fr .2fr .8fr .6fr .3fr;
+    grid-template-rows: .1fr .1fr .2fr 1.5fr .3fr .3fr;
     grid-template-areas: 
     "nav nav nav" 
     "breadcrumb breadcrumb breadcrumb"
@@ -554,8 +554,8 @@ img-thumbnail:hover {
 
 .item .cart-image{
     grid-area: cart-image;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .item .cart-name{
@@ -600,6 +600,7 @@ img-thumbnail:hover {
     width: 35px;
     height: 25px;
     margin: 0px 10px;
+    text-align: center;
 }
 
 
@@ -608,11 +609,23 @@ img-thumbnail:hover {
     grid-area: cart-total;
     display: block;
     padding: 25px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;   
+    justify-content: flex-end; 
 }
 
-.cart-total{
-    display: flex;   
-  justify-content: flex-end; 
+
+.cart-total .subtotal-text{
+    color: grey;
+    font-weight: 700;
+    padding-top: 10px;
+
+}
+
+.cart-total .subtotal-price{
+    font-weight: 700;
+    font-size: 25px;
+    padding-right: 10px;
 
 }
 
@@ -622,17 +635,17 @@ img-thumbnail:hover {
     border-radius: 10px;
     margin: 15px 25px;
     font-family: 'Montserrat', sans-serif;
-    max-width: 400px;
+    max-width: 500px;
+    /* max-height: 750px; */
+    height: 80%;
     padding: 0px 50px;
-
-    
-
 }
 
 .card-details .card-details-header{
     color: white;
-    padding: 25px;
+    padding: 25px 0px;
     font-size: 2vw;
+    float: left;
 }
 
 .card-details .btn-checkout{
@@ -749,7 +762,7 @@ img-thumbnail:hover {
 
     .container-cart {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: .1fr .2fr .2fr 1fr .4fr .8fr .3fr;
+        grid-template-rows: .1fr .2fr .2fr 1fr .2fr .8fr .3fr;
         grid-template-areas: 
         "nav nav nav" 
         "breadcrumb breadcrumb breadcrumb"

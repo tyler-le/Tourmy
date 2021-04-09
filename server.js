@@ -1,5 +1,6 @@
 const PORT = 3000
 const Product = require('./models/product')
+const Cart = require('./models/cart')
 
 const express = require('express')
 const app = express()
@@ -26,56 +27,44 @@ db.once("open", () => {
   console.log("Database Connected");
 });
 
+
+
 app.get('/favicon.ico', (req, res) => res.status(204));
 
-
-
 app.get('/', async (req, res) => {
-  const featuredSurfboards = await Product.find({
-    tags: 'featured'
-  });
-
-  res.render('home', {
-    featuredSurfboards
-  });
+  const featuredSurfboards = await Product.find({tags: 'featured'});
+  res.render('home', {featuredSurfboards});
 })
+
+app.get('/cart', async (req, res) => {
+  const allProducts = await Product.find();
+ 
+  res.render('tourmy/cart', {allProducts});
+});
 
 app.get('/:category', async (req, res) => {
   // Refactor better
   const category = req.params.category
-  const allSurfboards = await Product.find({
-    category
-  })
-  const allFins = await Product.find({
-    category
-  })
-  const allAccessories = await Product.find({
-    category
-  })
-  res.render(`tourmy/${category}`, {
-    allSurfboards,
-    allFins,
-    allAccessories
-  });
+  const allSurfboards = await Product.find({category})
+  const allFins = await Product.find({category})
+  const allAccessories = await Product.find({category})
+  res.render(`tourmy/${category}`, {allSurfboards, allFins, allAccessories});
 });
 
 
 app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   const category = req.params.category
-  featuredSurfboards = await Product.find({
-    tags: 'featured'
-  });
+  featuredSurfboards = await Product.find({tags: 'featured'});
 
   const specificProduct = await Product.findById(req.params.id);
-  res.render('tourmy/show', {
-    specificProduct,
-    featuredSurfboards,
-    category
-  });
+  res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
 });
 
 app.get('/cart', async (req, res) => {
-  res.render('tourmy/cart');
+  console.log(allProducts)
+  const allProducts = await Product.find();
+  console.log("HI")
+  res.render('tourmy/cart', {allProducts});
 });
 
 
