@@ -546,7 +546,7 @@ img-thumbnail:hover {
     margin: 20px 0px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr .2fr;
     grid-auto-rows: auto;
     grid-template-areas: "cart-image cart-name cart-qty cart-price";
 
@@ -618,9 +618,30 @@ img-thumbnail:hover {
 
 .card-details{
     grid-area: card-details;
-    background: #333;
+    background: #444;
     border-radius: 10px;
     margin: 15px 25px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 400px;
+    padding: 0px 50px;
+
+    
+
+}
+
+.card-details .card-details-header{
+    color: white;
+    padding: 25px;
+    font-size: 2vw;
+}
+
+.card-details .btn-checkout{
+    background: blue;
+    color: white;
+    font-weight: 600;
+    padding: 10px 55px; 
+    display: block;
+    margin: 0 auto;
 }
 /*Large Tablets */
 @media only screen and (max-width: 1366px) {
