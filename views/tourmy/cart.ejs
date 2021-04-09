@@ -7,23 +7,57 @@
 </head>
 
 <body>
-    <main class="">
+    <main class="container-cart">
         <%- include('../partials/navbar')%>
         <div class="breadcrumb"><a href="/">Home</a> <span>|</span> <span>Shopping Cart</span></div>
         <h1 class="collection-title">Shopping Cart</h1>
 
 
-        <div class="cart-item">
-            <img src="" alt="">
-            <h4>Item Name</h4>
-            <span>$4.99</span>
-            <i class="far fa-trash-alt"></i>
+        <div class="cart-items">
+            <div class="item">
+                <img class="cart-image" src="/images/surfboards/orig/firewire_seaside.jpg" alt="">
+                <h4 class="cart-name">Item Name</h4>
+                
+                <div class="cart-qty">
+                    <i class="fas fa-minus"></i>
+                    <input type="text">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+                <span class="cart-price">$4.99</span>
+                <i class="cart-remove fas fa-times"></i>
+            </div>
+
+
+            <div class="item">
+                <img class="cart-image" src="/images/surfboards/orig/firewire_seaside.jpg" alt="">
+                <h4 class="cart-name">Haydenshapes Hypto Krypto</h4>
+
+                <div class="cart-qty">
+                    <i class="fas fa-minus"></i>
+                    <input type="text">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+                <span class="cart-price">$4.99</span>
+                <i class="cart-remove fas fa-times"></i>
+            </div>
         </div>
 
+
+
         <div class="cart-total">
-            <span>Have a coupon code?</span>
-            <span>Total</span>
-            <span>$100.00</span>
+            <span>Subtotal</span><span>$100.00</span>
+        </div>
+
+        <div class="card-details">
+            <!-- <h1>Card details</h1>
+            <h4>Card Type</h4>
+            <p>Name on Card</p>
+            <p>Card Numver</p>
+            Exp -->
+                
+
         </div>
 
         <%- include('../partials/footer')%>
