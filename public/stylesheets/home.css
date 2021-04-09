@@ -606,8 +606,8 @@ img-thumbnail:hover {
 }
 
 .cart-qty input{
-    width: 35px;
-    height: 25px;
+    width: 45px;
+    height: 30px;
     margin: 0px 10px;
     text-align: center;
 }
@@ -655,6 +655,8 @@ img-thumbnail:hover {
     padding: 25px 0px;
     font-size: 2vw;
     float: left;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
 }
 
 .card-details .btn-checkout{
