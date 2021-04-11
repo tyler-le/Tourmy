@@ -110,9 +110,10 @@ img {
     margin: 10px;
 }
 
-.featured-boards-panel:hover {
+.featured-boards-panel:hover img {
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    opacity: .5;
     transition: .3s ease-in-out;
 }
 
