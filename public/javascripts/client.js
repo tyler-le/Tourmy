@@ -12,17 +12,12 @@
 //     // How to access MongoDB?
 //   });
 
-// Very hacky, try to refactor
-const cart_remove = document.getElementsByClassName("cart-remove");
+let cart_remove = document.getElementsByClassName("cart-remove");
 for (let i = 0; i < cart_remove.length; i++) {
   cart_remove[i].addEventListener("click", () => {
-
-    try {
-      cart_remove[i].parentElement.remove();
-    } catch (error) {
-      i = 0;
-      cart_remove[i].parentElement.remove();
-    }
+    parent = cart_remove[i].parentElement;
+    console.log(parent)
+    parent.style.display = 'none';
   });
 }
 
@@ -43,4 +38,3 @@ for (let i = 0; i < plus.length; i++) {
     qty[i].value++;
   })
 }
-
