@@ -648,7 +648,8 @@ img-thumbnail:hover {
     text-transform: uppercase;
     font-weight: 600;
     height: fit-content;
-    margin: 0;
+    margin-right: 100px;
+    margin: 20px 15px;
 }
 
 .cart-summary p {
