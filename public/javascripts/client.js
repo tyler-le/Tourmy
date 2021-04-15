@@ -45,4 +45,5 @@ for (let i = 0; i < item_prices.length; i++) {
 }
 
 subtotal_span[0].innerText = `$${subtotal}.00`
+
 // cart_price_span[0].innerText = `$${item_prices[1]}.00`;
