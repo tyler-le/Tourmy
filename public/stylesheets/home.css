@@ -648,8 +648,8 @@ img-thumbnail:hover {
     text-transform: uppercase;
     font-weight: 600;
     height: fit-content;
-    margin-right: 100px;
-    margin: 20px 15px;
+    margin: 20px 15px 20px 50px;
+    width: 80%;
 }
 
 .cart-summary p {
@@ -883,6 +883,27 @@ img-thumbnail:hover {
 
     .cart-qty i {
         display: none;
+    }
+
+    .container-cart {
+        grid-template-columns: 1fr;
+        grid-template-rows: .1fr .1fr .1fr .7fr 1fr .3fr;
+        grid-template-areas: 
+        "nav" 
+        "breadcrumb"
+        "collection-title"
+        "cart-items"
+        "cart-summary"
+        "footer";
+    }
+
+    .cart-items .item{
+        margin: 20px 15px;
+    }
+    .item .cart-image{
+        grid-area: cart-image;
+        height: 100px;
+        width: 100px;
     }
 }
 
