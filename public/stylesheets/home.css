@@ -663,8 +663,6 @@ form .social-btn .btn{
     .nav-item:last-child {
         padding-right: 0px;
     }
-
-    
     .container-fluid{
         grid-template-rows: .1fr .3fr .3fr .2fr .7fr .3fr;
     }
