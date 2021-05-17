@@ -13,13 +13,11 @@ const initializeCart = () => {
   tax_span[0].innerText = `$${tax.toFixed(2)}`;
 }
 
-
 const manipulatePrices = () => {
   tax = (subtotal * taxRate);
   tax_span[0].innerText = `$${tax.toFixed(2)}`;
   total_span[0].innerText = `$${calcTotal(subtotal, tax)}`
 }
-
 
 const calcTotal = (subtotal, tax) => {
   tax = parseFloat(tax);

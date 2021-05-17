@@ -60,11 +60,10 @@ app.get('/:category/:id', async (req, res, featuredSurfboards) => {
   res.render('tourmy/show', {specificProduct, featuredSurfboards, category});
 });
 
-app.get('/cart', async (req, res) => {
-  console.log(allProducts)
+app.get('/cart', async (req, res, featuredSurfboards) => {
   const allProducts = await Product.find();
-  console.log("HI")
-  res.render('tourmy/cart', {allProducts});
+  featuredSurfboards = await Product.find({tags: 'featured'});
+  res.render('tourmy/cart', {allProducts, featuredSurfboards});
 });
 
 

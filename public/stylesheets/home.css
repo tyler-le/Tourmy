@@ -5,6 +5,9 @@ a{
     text-decoration: none;
 }
 
+body{
+}
+
 .btn{
     padding-top: 0;
     padding-bottom: 0;
@@ -83,6 +86,7 @@ nav {
 
 .nav-item:last-child {
     border-right: none;
+    padding-right: 15px;
 }
 
 img {
@@ -205,6 +209,12 @@ footer {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .8px;
+    
+
+    /* position: absolute; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 0;   */
 }
 
 footer a, footer i, footer a:hover {
@@ -498,12 +508,13 @@ img-thumbnail:hover {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr .2fr 1.5fr .3fr;
+    grid-template-rows: .2fr .1fr .1fr 1.5fr .8fr .3fr;
     grid-template-areas: 
     "nav nav nav" 
     "breadcrumb breadcrumb breadcrumb"
     "collection-title collection-title cart-summary"
     "cart-items cart-items cart-summary"
+    "recommend recommend recommend"
     "footer footer footer";
 }
 
@@ -623,8 +634,37 @@ img-thumbnail:hover {
     margin: 0 auto;
 }
 
+.border-md {
+    border-width: 2px;
+}
+
+form{
+    padding-top: 30px;
+}
+
+.form-img{
+    object-fit: cover;
+    padding: 0;
+}
+
+form .btn{
+    width: 100%;
+}
+
+form .social-btn .btn{
+   margin-bottom: 10px;
+}
+
+
+
 /*Large Tablets */
 @media only screen and (max-width: 1366px) {
+
+    .nav-item:last-child {
+        padding-right: 0px;
+    }
+
+    
     .container-fluid{
         grid-template-rows: .1fr .3fr .3fr .2fr .7fr .3fr;
     }
