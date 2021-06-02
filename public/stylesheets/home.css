@@ -31,6 +31,7 @@ body{
 nav {
     grid-area: nav;
     padding: 10px 0px;
+    height: auto;
     
 }
 
@@ -49,7 +50,7 @@ nav {
     font-size: 30px;
     background: black;
     color: white;
-    padding: 1.5vw 5vw;    
+    padding: 2.1vw 5vw;    
 }
 
 .navbar-light .navbar-nav .nav-link {
