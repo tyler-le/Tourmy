@@ -1,3 +1,4 @@
+
 const PORT = 3000
 const Product = require('./models/product')
 const Cart = require('./models/cart')
@@ -15,9 +16,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+
 // Connect to MongoDB
-const DB_URI = "mongodb+srv://tyler25419:Master25419!@cluster0.yd5bk.mongodb.net/Tourmy?retryWrites=true&w=majority";
-mongoose.connect(DB_URI, {
+mongoose.connect(process.env.DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
