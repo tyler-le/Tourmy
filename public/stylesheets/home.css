@@ -1,11 +1,9 @@
 * {
     box-sizing: border-box;
 }
+
 a{
     text-decoration: none;
-}
-
-body{
 }
 
 .btn{
@@ -50,7 +48,7 @@ nav {
     font-size: 30px;
     background: black;
     color: white;
-    padding: 2.1vw 5vw;    
+    padding: 2.3vw 5vw;    
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -210,12 +208,10 @@ footer {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .8px;
-    
 
-    /* position: absolute; */
-    /* right: 0; */
-    /* bottom: 0; */
-    /* left: 0;   */
+    display: flex;
+    min-height: 20vh;
+    flex-direction: column;
 }
 
 footer a, footer i, footer a:hover {
@@ -706,6 +702,10 @@ form .social-btn .btn{
         width: 70%;
         height: 100%;
     }
+
+    footer {
+        min-height: 5vh;
+    }
 }
 
 /* Mini Tablets */
@@ -724,6 +724,11 @@ form .social-btn .btn{
             "shop-content shop-content" 
             "footer footer";
     }
+
+    .navbar-light .navbar-brand {
+        padding: 4.2vw 5vw;    
+    }
+
     .recommended-boards{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .3fr .3fr;
