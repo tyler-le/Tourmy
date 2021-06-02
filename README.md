@@ -1,2 +1,2 @@
 # Tourmy
-Full stack eCommerce website selling surfboards and surf accessories.
+An eCommerce website selling surfboards and surf accessories.
