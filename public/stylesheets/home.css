@@ -656,7 +656,9 @@ form .social-btn .btn{
    margin-bottom: 10px;
 }
 
-
+.btn-login-register{
+    background: black;
+}
 
 /*Large Tablets */
 @media only screen and (max-width: 1366px) {
